@@ -1,0 +1,117 @@
+.filter-buttons{
+    display: flex;
+    justify-content: start;
+    flex-direction: row;
+    background-color: #232f3e;
+    height: 39px;
+    
+}
+.filter-button{
+    background-color: #232f3e;
+    color: #f08804;
+    border:0;
+    margin: 5px 0 6px 0;
+    padding: 8px 9px;
+}
+.products{
+   display: flex;
+   flex-wrap: wrap;
+}
+.product-card{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    margin: 16px;
+    height:auto;
+    margin-top:2em;
+    min-height:200px;
+    border-bottom:2px solid #ddd;
+    margin-bottom: -2px;
+    padding: 0;
+    width: 270px;
+    display:flex;
+    flex-direction:column
+
+}
+.product-name{
+    padding:16px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+.product-price{
+    color: #f08804;
+    margin: 8px 0 8px 0;
+}
+
+.product-category{
+    background-color: #ffc107;
+    color: #0f1111;
+    border-radius: 0.375rem;
+    border-color: white;
+    padding: 8px;
+    border-style: solid;
+    text-transform: capitalize;
+}
+.filter-button:hover{
+    border: 1px solid white;
+    border-color: white;
+    margin: 1px;
+}
+.filter-button:focus{
+    color: white;
+}
+.product-image{
+    mix-blend-mode:multiply;
+    filter:contrast(1);
+    height: 250px;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    background-color: rgba(242, 241, 239,0.5);
+}
+[data-star]{
+    position: relative;
+    text-align:left;
+    font-style:normal;
+    display:inline-block;
+
+}
+
+[data-star]::before{
+    content:"★★★★★" ;
+    color: rgba(66, 66, 66, 0.255);   
+    display: block;
+}
+[data-star]::after{
+    position: absolute;
+    content:'★★★★★';
+    color: #f08804;
+    overflow: hidden;
+    left: 0;
+    top: 0;
+ 
+}
+
+[data-star^="3"]::after{width:60%}
+[data-star^="3.5"]::after{width:70%}
+[data-star^="3.6"]::after{width:72%}
+[data-star^="3.8"]::after{width:76%}/*3.8 / 5 = .76 so when the rate is 3.8 the percent is 76% and so on */
+[data-star^="4"]::after{width:80%}
+[data-star^="4.5"]::after{width:90%}
+[data-star^="4.6"]::after{width:92%}
+[data-star^="4.8"]::after{width:96%}
+[data-star^="5"]::after{width:100%}
+
+.header{
+    background-color: #131921;
+    color: #f08804;
+    height: 60px;
+    align-items: center;
+    display: flex;
+    padding: 1px 8px 0 6px;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
